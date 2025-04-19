@@ -47,4 +47,9 @@ yarn-error.log
 logs/
 *.log
 *.sqlite
-*.db 
+*.db
+
+# Docker
+.docker/
+docker-compose.override.yml
+photos/ 
