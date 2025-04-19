@@ -1,0 +1,184 @@
+.photo-grid-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.filters-container {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+}
+
+.filter-button {
+    flex: 1;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 120px;
+}
+
+.filter-button:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.photo-preview {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Создаем квадратную ячейку */
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.photo-preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изменено с contain на cover */
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    transition: transform 0.2s ease;
+}
+
+.photo-preview:hover img {
+    transform: scale(1.05);
+}
+
+.photo-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+}
+
+.photo-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+}
+
+.photo-status {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.photo-status:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.photo-status.approved {
+    background-color: #28a745;
+}
+
+.photo-status.rejected {
+    background-color: #dc3545;
+}
+
+.photo-status.pending {
+    background-color: #ffc107;
+    color: black;
+}
+
+.photo-status.normal {
+    background-color: #6c757d;
+}
+
+.photo-status.published {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.photo-has-face,
+.photo-is-nude {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+.photo-preview.selected {
+    border: 2px solid #007bff;
+}
+
+.no-photos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 32px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    color: #666;
+}
+
+.save-button {
+    margin-left: auto;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.save-button:hover {
+    background-color: #218838;
+}
+
+.save-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.sort-button {
+    padding: 8px 16px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin-left: 8px;
+}
+
+.sort-button:hover {
+    background-color: #5a6268;
+} 

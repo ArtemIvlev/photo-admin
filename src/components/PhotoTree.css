@@ -1,0 +1,86 @@
+.photo-tree {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.tree-node {
+  margin-left: 20px;
+}
+
+.directory {
+  margin: 10px 0;
+}
+
+.directory-name {
+  font-weight: bold;
+  color: #2c3e50;
+  padding: 5px;
+  background-color: #f5f6fa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.directory-name:hover {
+  background-color: #e1e4e8;
+}
+
+.files {
+  margin-left: 20px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 2px 0;
+  border-radius: 4px;
+}
+
+.file:hover {
+  background-color: #f5f6fa;
+}
+
+.file-name {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.file-name.nude {
+  color: #e74c3c;
+}
+
+.file-name.face {
+  color: #3498db;
+}
+
+.file-status {
+  margin: 0 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  background-color: #ecf0f1;
+}
+
+.file-score {
+  min-width: 60px;
+  text-align: right;
+  color: #7f8c8d;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+}
+
+.error {
+  color: #e74c3c;
+  padding: 20px;
+  text-align: center;
+}
+
+.empty {
+  color: #7f8c8d;
+  padding: 20px;
+  text-align: center;
+} 
